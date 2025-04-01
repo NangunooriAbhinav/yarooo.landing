@@ -5,7 +5,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, Globe } from "luci
 export default function FooterSection() {
   return (
     <footer className="relative z-10 bg-[#f5f5f5] dark:bg-[#1f2937] pb-10 pt-20 lg:pb-20 lg:pt-[120px]">
-      <div className="container mx-auto max-w-7xl px-4">
+      <div className="container mx-auto max-w-7xl ">
         <div className="flex flex-wrap">
           <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
             <div className="mb-10 w-full">
