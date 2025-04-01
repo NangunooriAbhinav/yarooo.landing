@@ -148,7 +148,7 @@ export default function FooterSection() {
                   <Linkedin className="h-4 w-4" />
                 </Link>
               </div>
-              <p className="text-base text-gray-600 dark:text-white/70">&copy; {new Date().getFullYear()} TailGrids</p>
+              <p className="text-base text-gray-600 dark:text-white/70">&copy; {new Date().getFullYear()} Yarooo</p>
             </div>
           </div>
         </div>
