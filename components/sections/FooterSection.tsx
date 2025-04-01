@@ -113,30 +113,14 @@ export default function FooterSection() {
                     Follow Us On
                   </h4>
                   <div className="mb-6 flex items-center">
+                   
                     <Link
-                      href="#"
-                      className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:border-[#4fb472] hover:bg-[#4fb472] hover:text-white dark:border-white/70 dark:text-white/70 dark:hover:border-[#4fb472]"
-                    >
-                      <Facebook className="h-4 w-4" />
-                    </Link>
-                    <Link
-                      href="#"
-                      className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:border-[#4fb472] hover:bg-[#4fb472] hover:text-white dark:border-white/70 dark:text-white/70 dark:hover:border-[#4fb472]"
-                    >
-                      <Twitter className="h-4 w-4" />
-                    </Link>
-                    <Link
-                      href="#"
+                      href="https://www.instagram.com/yarooo.com_?igsh=anlrN3p6MDUxbHMy&utm_source=qr"
                       className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:border-[#4fb472] hover:bg-[#4fb472] hover:text-white dark:border-white/70 dark:text-white/70 dark:hover:border-[#4fb472]"
                     >
                       <Instagram className="h-4 w-4" />
                     </Link>
-                    <Link
-                      href="#"
-                      className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:border-[#4fb472] hover:bg-[#4fb472] hover:text-white dark:border-white/70 dark:text-white/70 dark:hover:border-[#4fb472]"
-                    >
-                      <Linkedin className="h-4 w-4" />
-                    </Link>
+                    
                   </div>
                   <p className="text-base text-gray-600 dark:text-white/70">
                     &copy; {new Date().getFullYear()} Yarooo
