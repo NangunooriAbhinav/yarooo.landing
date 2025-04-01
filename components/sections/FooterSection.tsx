@@ -33,10 +33,17 @@ export default function FooterSection() {
                   <span>
                     Email:{" "}
                     <a
-                      href="mailto:team@noobsverse.com"
+                      href="mailto:yaroooofficial@gmail.com"
                       className="hover:text-[#4fb472]"
                     >
-                      team@noobsverse.com
+                      yaroooofficial@gmail.com
+                    </a>{" "}
+                    /{" "}
+                    <a
+                      href="mailto:support@yarooo.com"
+                      className="hover:text-[#4fb472]"
+                    >
+                      support@yarooo.com
                     </a>
                   </span>
                 </p>
@@ -48,14 +55,14 @@ export default function FooterSection() {
                       href="tel:+917569236628"
                       className="hover:text-[#4fb472]"
                     >
-                      +91 7569236628
+                      +91 9642876876
                     </a>
                   </span>
                 </p>
                 <p className="flex items-center text-sm text-gray-800 dark:text-white">
                   <Globe className="mr-2 h-4 w-4" />
                   <span>
-                    Website:{" "}
+                  Designed and Developed by{" "}
                     <a
                       className="hover:text-[#4fb472]"
                       href="https://www.coffeecodes.in/"
@@ -113,14 +120,12 @@ export default function FooterSection() {
                     Follow Us On
                   </h4>
                   <div className="mb-6 flex items-center">
-                   
                     <Link
                       href="https://www.instagram.com/yarooo.com_?igsh=anlrN3p6MDUxbHMy&utm_source=qr"
                       className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:border-[#4fb472] hover:bg-[#4fb472] hover:text-white dark:border-white/70 dark:text-white/70 dark:hover:border-[#4fb472]"
                     >
                       <Instagram className="h-4 w-4" />
                     </Link>
-                    
                   </div>
                   <p className="text-base text-gray-600 dark:text-white/70">
                     &copy; {new Date().getFullYear()} Yarooo
