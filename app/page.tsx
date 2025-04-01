@@ -33,9 +33,6 @@ export default function Home() {
         {/* FAQ Section */}
         <FAQSection />
 
-        {/* Contact Section */}
-        <ContactSection />
-
         {/* Call To Action Section */}
         <CallToActionSection />
 

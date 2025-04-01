@@ -23,7 +23,7 @@ export default function HeroSection() {
               <ul className="flex flex-wrap items-center">
                 <li className="mb-4 md:mb-0">
                   <Link
-                    href="#"
+                    href="/coming-soon"
                     className="group mr-4 inline-flex h-[60px] md:h-[70px] items-center justify-center rounded-xl bg-white py-[10px] pl-[10px] pr-5 text-center text-base font-medium text-gray-900 transition duration-200 hover:text-blue-600 hover:shadow-lg dark:bg-[#111928] dark:text-white dark:hover:text-blue-400"
                   >
                     <span className="mr-4 text-gray-900 group-hover:text-blue-600 dark:text-[#1f2937] ">
@@ -51,7 +51,7 @@ export default function HeroSection() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/coming-soon"
                     className="group inline-flex h-[60px] md:h-[70px] items-center justify-center rounded-xl py-[10px] pl-[10px] pr-5 text-center text-base font-medium text-gray-900  transition duration-200 hover:text-blue-600  dark:text-white dark:hover:text-blue-400"
                   >
                     <span className="mr-4">

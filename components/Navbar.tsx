@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
-export default function Navbar() {
+export default function Navbar({ hideNavLinks = false }) {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -28,9 +28,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "#about", label: "About" },
-    { href: "#pricing", label: "FAQ" },
+    { href: "#faq", label: "FAQ" },
     { href: "#features", label: "Features" },
-    { href: "/", label: "Contact" },
+    { href: "/contact", label: "Contact" },
   ]
 
   return (
@@ -64,55 +64,53 @@ export default function Navbar() {
           </div>
 
           <div className="flex w-full items-center justify-between">
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleNavbar}
-              className="absolute right-4 top-1/2 -translate-y-1/2 rounded-lg p-2 lg:hidden"
-              aria-expanded={navbarOpen}
-              aria-label="Toggle navigation menu"
-            >
-              {navbarOpen ? (
-                <X className="h-6 w-6 text-gray-700 dark:text-gray-200" />
-              ) : (
-                <Menu className="h-6 w-6 text-gray-700 dark:text-gray-200" />
-              )}
-            </button>
+            {/* Mobile Menu Button - Only show if navLinks aren't hidden */}
+            {!hideNavLinks && (
+              <button
+                onClick={toggleNavbar}
+                className="absolute right-4 top-1/2 -translate-y-1/2 rounded-lg p-2 lg:hidden"
+                aria-expanded={navbarOpen}
+                aria-label="Toggle navigation menu"
+              >
+                {navbarOpen ? (
+                  <X className="h-6 w-6 text-gray-700 dark:text-gray-200" />
+                ) : (
+                  <Menu className="h-6 w-6 text-gray-700 dark:text-gray-200" />
+                )}
+              </button>
+            )}
 
-            {/* Navigation */}
-            <nav
-              className={`absolute right-4 top-full z-20 w-full max-w-[250px] rounded-lg bg-white px-6 py-5 shadow transition-all dark:bg-gray-900 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-0 lg:py-0 lg:shadow-none lg:dark:bg-transparent ${
-                navbarOpen
-                  ? "translate-y-0 opacity-100"
-                  : "invisible -translate-y-5 opacity-0 lg:visible lg:translate-y-0 lg:opacity-100"
-              }`}
-              id="mainNav"
-            >
-              <ul className="block lg:flex">
-                {navLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="flex py-2 text-base font-medium text-gray-900 transition-colors hover:text-[#4eb570] dark:text-white lg:ml-10 lg:inline-flex dark:hover:text-[#4eb570]"
-                      onClick={() => setNavbarOpen(false)}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            {/* Navigation - Only show if navLinks aren't hidden */}
+            {!hideNavLinks && (
+              <nav
+                className={`absolute right-4 top-full z-20 w-full max-w-[250px] rounded-lg bg-white px-6 py-5 shadow transition-all dark:bg-gray-900 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-0 lg:py-0 lg:shadow-none lg:dark:bg-transparent ${
+                  navbarOpen
+                    ? "translate-y-0 opacity-100"
+                    : "invisible -translate-y-5 opacity-0 lg:visible lg:translate-y-0 lg:opacity-100"
+                }`}
+                id="mainNav"
+              >
+                <ul className="block lg:flex">
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="flex py-2 text-base font-medium text-gray-900 transition-colors hover:text-[#4eb570] dark:text-white lg:ml-10 lg:inline-flex dark:hover:text-[#4eb570]"
+                        onClick={() => setNavbarOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
 
             {/* CTA Buttons */}
-            <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
-              <Link
-                href="/login"
-                className="px-5 py-2 text-base font-medium text-gray-900 transition-colors hover:text-[#4eb570] dark:text-white dark:hover:text-[#4eb570]"
-              >
-                Login
-              </Link>
-              <Link
-                href="/download"
-                className="rounded-md bg-gray-900 px-6 py-2 text-base font-medium text-white transition-colors hover:bg-[#637381] dark:bg-[#1f2a37]"
+            <div className={`${hideNavLinks ? 'flex w-full' : 'hidden'} justify-end sm:flex lg:pr-0`}>
+                <Link
+                href="/coming-soon"
+                className={`${hideNavLinks? "dark:bg-gray-900" : "bg-gray-900" } bg-gray-900 rounded-md  px-6 py-2 text-base font-medium text-white transition-colors hover:bg-[#637381] dark:bg-[#1f2a37]`}
               >
                 Download
               </Link>

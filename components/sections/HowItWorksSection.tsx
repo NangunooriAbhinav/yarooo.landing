@@ -52,7 +52,7 @@ function StepCard({ number, title, description, icon, isLast = false }: StepCard
 
 export default function HowItWorksSection() {
   return (
-    <section className="bg-gray-50 py-20 dark:bg-gray-800 lg:py-[120px]">
+    <section id="about" className="bg-gray-50 py-20 dark:bg-gray-800 lg:py-[120px]">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-16 max-w-[510px] text-center">
           <span className="mb-2 block text-lg font-semibold text-blue-600 dark:text-blue-400">

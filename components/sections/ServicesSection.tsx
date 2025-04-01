@@ -3,7 +3,7 @@ import Iphone15Pro from "../ui/iphone-15-pro";
 
 export default function ServicesSection() {
   return (
-    <section className="bg-white pb-8 pt-20 dark:bg-gray-900 lg:pb-16 lg:pt-[120px]">
+    <section id="features" className="bg-white pb-8 pt-20 dark:bg-gray-900 lg:pb-16 lg:pt-[120px]">
       <div className="container mx-auto max-w-7xl px-4 ">
         <div className="-mx-4 mb-10 flex flex-wrap items-center lg:mb-[60px]">
           <div className="w-full px-4 lg:w-6/12">
