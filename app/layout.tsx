@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Theme Switcher Demo',
-  description: 'A demo of theme switching functionality in Next.js',
+  title: 'Yarooo',
+  description: '',
 };
 
 export default function RootLayout({
