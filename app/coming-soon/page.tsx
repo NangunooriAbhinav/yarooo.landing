@@ -20,30 +20,35 @@ export default function ComingSoonPage() {
   const [email, setEmail] = useState("")
 
   useEffect(() => {
-    // Set launch date (30 days from now)
-    const launchDate = new Date()
-    launchDate.setDate(launchDate.getDate() + 30)
+    // Set launch date to May 1, 2025 at 12 AM UTC
+    const launchDate = new Date(Date.UTC(2025, 4, 1, 0, 0, 0));
     
-    const timer = setInterval(() => {
-      const now = new Date()
-      const difference = launchDate.getTime() - now.getTime()
+    // Calculate initial time left to avoid delay in first render
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = launchDate.getTime() - now.getTime();
       
       if (difference <= 0) {
-        clearInterval(timer)
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-        return
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
       }
       
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24))
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000)
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
       
-      setTimeLeft({ days, hours, minutes, seconds })
-    }, 1000)
+      return { days, hours, minutes, seconds };
+    };
     
-    return () => clearInterval(timer)
-  }, [])
+    // Set initial state immediately
+    setTimeLeft(calculateTimeLeft());
+    
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    
+    return () => clearInterval(timer);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
