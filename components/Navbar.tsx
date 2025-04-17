@@ -53,7 +53,7 @@ export default function Navbar({ hideNavLinks = false }) {
                 priority
               />
               <Image
-                src="/new-logo.png"
+                src="/whiteLogo.png"
                 alt="logo"
                 width={150}
                 height={40}

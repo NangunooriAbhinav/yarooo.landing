@@ -24,7 +24,14 @@ export default function FooterSection() {
                   alt="logo"
                   width={160}
                   height={40}
-                  className="max-w-full w-24"
+                  className="max-w-full w-24 block dark:hidden"
+                />
+                <Image
+                  src="/whiteLogo.png"
+                  alt="logo"
+                  width={160}
+                  height={40}
+                  className="max-w-full w-24 hidden dark:block"
                 />
               </Link>
               <div className="flex flex-col space-y-2">
@@ -62,7 +69,7 @@ export default function FooterSection() {
                 <p className="flex items-center text-sm text-gray-800 dark:text-white">
                   <Globe className="mr-2 h-4 w-4" />
                   <span>
-                  Designed and Developed by{" "}
+                    Designed and Developed by{" "}
                     <a
                       className="hover:text-[#4fb472]"
                       href="https://www.coffeecodes.in/"
