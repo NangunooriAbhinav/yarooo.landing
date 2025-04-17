@@ -110,7 +110,7 @@ export default function Navbar({ hideNavLinks = false }) {
             <div className={`${hideNavLinks ? 'flex w-full' : 'hidden'} justify-end sm:flex lg:pr-0`}>
                 <Link
                 href="/coming-soon"
-                className={`${hideNavLinks? "dark:bg-gray-900" : "bg-gray-900" } bg-gray-900 rounded-md  px-6 py-2 text-base font-medium text-white transition-colors hover:bg-[#637381] dark:bg-[#1f2a37]`}
+                className={`${hideNavLinks? "dark:bg-[#1f2937]" : "bg-gray-900" } bg-gray-900 rounded-md  px-6 py-2 text-base font-medium text-white transition-colors hover:bg-[#637381] dark:bg-[#1f2a37]`}
               >
                 Download
               </Link>
